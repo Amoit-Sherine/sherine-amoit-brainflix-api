@@ -19,7 +19,16 @@ router.post('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   const { id } = req.params;
-  res.send(`Fetching video with ID: ${id}`);
+
+  const video = videos.find(video => video.id == id);
+
+  if(video){
+    return res.send(video)
+  }
+
+  res.status(400).send(
+    { "message": "No video with that id exists" }
+  );
 });
 
 module.exports = router;
