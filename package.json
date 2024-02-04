@@ -9,8 +9,10 @@
   "author": "Sherine Amoit",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.1",
     "express": "^4.18.2",
     "fs": "*",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "uuid": "^9.0.1"
   }
 }
