@@ -1,7 +1,10 @@
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
+var cors = require('cors')
 
 const app = express();
+
+app.use(cors())
 
 app.get('/register', (req, res) => {
     res.send({
